@@ -1,0 +1,36 @@
+{% extends 'layouts/master.html' %}
+
+
+{% block title %}Courses | Index {% endblock title %}
+
+{% block body_class %}courses-index{% endblock body_class %}
+
+{% block content %}
+
+<div class="mt-5 p-3">
+    <h1 class="h1-pb">SES | Courses</h1>
+    {% include 'partials/_message.html' %}
+    <table class="table table table-hover w-100">
+        <thead>
+            <th>S.No</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% for course in data %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{course.name}}</td>
+                <td>{{course.code}}</td>
+                <td>
+                    <a href="{% url 'edit_course' course.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    <a href="{% url 'delete_course' course.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

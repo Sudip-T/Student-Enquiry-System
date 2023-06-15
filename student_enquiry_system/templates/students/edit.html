@@ -1,0 +1,20 @@
+{% extends 'layouts/master.html' %}
+
+{% block title %} {% endblock title %}
+
+
+{% block content %}
+
+<div class="pt-fifty">
+    <a href="{% url 'index_student' %}" class="btn btn-primary btn-sm btn-fl">Back</a>
+    <h1>Edit Student Details</h1>
+    <div class="card mt-5 p-5">
+        <form action="" method="POST" class="cs-flex">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+{% endblock content %}

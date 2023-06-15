@@ -1,0 +1,93 @@
+{% extends 'layouts/master.html' %}
+{% load static %}
+
+{% block title %} {% endblock title %}
+
+
+{% block content %}
+<style>
+    .profile-head {
+        transform: translateY(5rem)
+    }
+
+    .cover {
+        background: url('{% static "img/profile-background.jpg" %}');
+        background-size: cover;
+        background-repeat: no-repeat
+    }
+
+    .col-md-5 {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .bg-light {
+        background-color: #1d1d1d !important;
+    }
+
+    .about-info p {
+        flex: 0 0 32%;
+        border: 1px solid #52585e;
+        border-radius: 3px;
+        line-height: 32px;
+        padding: 2px 10px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .btn-outline-dark {
+        color: #fff;
+        background-color: #343a40;
+        border-color: #343a40;
+    }
+
+    .about-info p:last-child {
+        flex: 0 0 66%;
+    }
+
+    .m0a {
+        margin: 0 auto;
+    }
+
+    .w-th {
+        width: 1000px;
+    }
+</style>
+
+<div class="pt-fifty m0a w-th">
+    <a href="{% url 'index_student' %}" class="btn-fl"><img src="{% static 'img/arrow.png' %}" alt="" width="33px"></a>
+    <h1>Student Details</h1>
+    <div class="card mt-4 p-5">
+        <div class="row">
+            <div class="col-md-5 mx-auto">
+                <div class="bg-white shadow rounded overflow-hidden">
+                    <div class="px-4 pt-0 pb-4 cover">
+                        <div class="media align-items-end profile-head" style="display: flex;">
+                            <div class="profile mr-3" style="display: flex;flex-direction: column;margin-right: 25px;">
+                                <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+                                    alt="..." width="130" class="rounded mb-2 img-thumbnail"><a
+                                    href="{% url 'edit_student' student.id %}"
+                                    class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
+                            <div class="media-body mb-5 text-white">
+                                <h4 class="mb-4">{{student.first_name}} {{student.middle_name|default:''}}
+                                    {{student.last_name}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3" style="background-color: #1d1d1d !important;padding-top: 65px !important;">
+                        <div class="p-4 rounded shadow-sm bg-light about-info"
+                            style="border: none;display: flex;flex-wrap: wrap;gap: 15px;">
+                            <p class="mb-0">Email: {{student.email}}</p>
+                            <p class="mb-0">Contact: {{student.contact}}</p>
+                            <p class="mb-0">Course: {{student.courses}}</p>
+                            <p class="mb-0">Degree: {{student.current_degree}}</p>
+                            <p class="mb-0">{{student.address}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

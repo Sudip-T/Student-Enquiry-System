@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+body {
+    background: #41464b !important;
+    font-family: 'Arimo', sans-serif !important;
+    /* background: #171818; */
+}
+
+.bg-light {
+    background-color: #1d1d1d !important;
+    color: #919191 !important;
+    border-bottom: 1px solid #2f2f2f;
+}
+.navbar-light .navbar-nav .nav-link , .navbar-light .navbar-brand{
+    color: #919191;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-brand{
+    color: #6AC045 !important;
+}
+nav .form-control {
+    width: 250px;
+    height: 35px;
+    font-size: .85em;
+    font-weight: bold;
+    color: #919191;
+    border: 2px solid #333;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    padding: 4px 30px;
+    background: #1d1d1d url("../images/website/icon-search.svg") no-repeat 9px 8px
+}
+.pt-fifty {
+    padding-top: 50px;
+}
+h1 {
+    color: var(--h1-color) !important;
+    text-align: center;
+    font-size: 32px;
+}
+.btn-fl {
+    float: left;
+    position: relative;
+    top: 2px;
+    padding: 5px 20px;
+}
+:root {
+    --btn-color: #93a0b5;
+    --td-th: #aea99a;
+    --h1-color: #c6c6c6;
+    --btn-background: #0d1a25;
+    --tr-bg: #282828;
+    --yellow: #fcb900;
+    --hover: #eeb75d;
+    --white: #fff;
+}
+td {
+
+    padding: 0px 20px;
+}
+
+tr {
+    background: var(--tr-bg);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+td,
+th {
+    line-height: 32px;
+    color: var(--td-th);
+}
+.link-to {
+    color: var(--btn-color);
+    text-align: center;
+    margin-top: 20px;
+}
+table{
+    padding-bottom: 20px;
+    border-collapse: inherit;
+}
+.pos-relative,
+.header-wrapper .col-50 a {
+    position: relative;
+}
+
+.btn-sm {
+    background: var(--btn-background);
+    padding: 5px 30px;
+}
+.p-0{
+    padding-left: 0 !important;
+}
+.card {
+    background-color: #282828;
+}
+label {
+    color: var(--h1-color);
+    margin-bottom: 5px;
+}
+.form-control {
+    line-height: 29px;
+    font-size: .85em;
+    font-weight: bold;
+    color: #919191;
+    border: 2px solid #41464b;
+    padding: 4px 30px;
+    background: #1d1d1d;
+}
+.h1-pb {
+    padding-bottom: 15px;
+}
+.cs-flex label, .cs-flex input[type='submit'] {
+    font-size: 15px;
+}
+.cs-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cs-flex p{
+    flex: 0 0 32%;
+}
+.cs-flex p input, .cs-flex p select{
+    width: 100%;
+}
+.cs-flex p input{
+    background: var(--btn-background);
+    border: 1px solid #52585e;
+    border-radius: 3px;
+    line-height: 32px;
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.cs-flex p select {
+    background: var(--btn-background);
+    height: 37px;
+    border-radius: 3px;
+    color: #fff;
+}
+.cs-flex p input[type='file']{
+    padding: 0;
+}
+.cs-flex input[type='submit']{
+    width: 500px;
+    margin: 30px auto;
+    background: var(--btn-background);
+    padding: 5px 30px;
+}
+.col-w-50 {
+    flex: 0 0 49%;
+}
+.col-w-100 {
+    width: 100%;
+}
+.g {
+    background: var(--btn-background);
+    border-width: 1px;
+}
+.cs-flex input{
+    color: #fff;
+    letter-spacing: .5px;
+    font-weight: 500;
+}
+.form-control:focus {
+    color: #fff;
+    background-color: unset;
+    border:1px solid #fff;
+    outline: 0;
+    box-shadow: unset;
+    background: var(--btn-background);
+}
+nav .form-control:focus {
+    border: 2px solid #333;
+}
+.btn-primary:focus, .btn-danger:focus {
+    box-shadow: none;
+}
+.table>:not(caption)>*>* {
+    border-bottom: 0;
+}
+.mt-3 {
+    margin-bottom: 1rem !important;
+}
+.dashboard-main .col .card {
+    border: 2px solid #444343;
+}
+.dashboard-main .col .card h4 {
+    color: #fff;
+}
+.alert {
+    padding: 0.5rem 1rem;
+}
+.login-page form, .register-page form {
+    flex-direction: column;
+    max-width: 500px;
+}
+.d-fx {
+    display: flex;
+    justify-content: center;
+    flex-direction: unset;
+}
+.d-fx .form-control:focus {
+    border: 2px solid #41464b;
+}
+.p-sty1 {
+    flex: unset !important;
+    color: #fff;
+    text-align: center;
+}
+.d-fx input{
+    background: #1d1d1d !important;
+}
+.register-page .alert, .login-page .alert{
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+.register-page .mt-5, .login-page .mt-5{
+    margin-top: 2rem!important;
+}
+nav form {
+    margin-left: auto;
+    margin-right: 0;
+}
+ul.cb-ul {
+    margin-right: 0 !important;
+    margin-left: 0;
+}
+.user-profile{
+    color: #6AC045 !important;
+}
+.dashboard-main .messages .alert{
+    margin-top: 20px;
+}

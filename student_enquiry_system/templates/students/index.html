@@ -1,0 +1,48 @@
+{% extends 'layouts/master.html' %}
+
+{% block title %} {% endblock title %}
+
+
+{% block content %}
+
+<div class="mt-5 p-3">
+    <h1 class="h1-pb">SES | Students</h1>
+    {% include 'partials/_message.html' %}
+    <table class="table table-hover w-100">
+        <thead>
+            <th>S.No</th>
+            <th>Full Name</th>
+
+            <th>Email</th>
+            <th>Contact</th>
+            <!-- <th>Address</th>
+            <th>Degree</th>
+            <th>Profile Img</th> -->
+            <th>Course</th>
+            <th>Created At</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            {% for student in data %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{student.first_name}} {{student.middle_name|default:''}} {{student.last_name}}</td>
+                <td>{{student.email}}</td>
+                <td>{{student.contact}}</td>
+                <!-- <td>{{student.address}}</td>
+                <td>{{student.current_degree|default:'-'}}</td>
+                <td>{{student.profile_img|default:'-'}}</td> -->
+                <td>{{student.courses}}</td>
+                <td>{{student.created_at}}</td>
+                <td>
+                    <a href="{% url 'show_student' student.id %}" class="btn btn-primary btn-sm">Show</a>
+                    <a href="{% url 'edit_student' student.id %}" class="btn btn-success btn-sm">Edit</a>
+                    <a href="{% url 'delete_student' student.id %}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

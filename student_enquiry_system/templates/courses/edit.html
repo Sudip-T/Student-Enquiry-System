@@ -1,0 +1,29 @@
+{% extends 'layouts/master.html' %}
+
+{% block title %}   {% endblock title %}
+
+
+{% block content %}
+
+<div class="pt-fifty">
+    <a href="{% url 'index_course' %}" class="btn btn-primary btn-sm btn-fl">Back</a>
+    <h1>Update Course</h1>
+    <div class="card p-5 mt-3">
+        <form action="{% url 'edit_course' course.id %}" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="id" value="{{course.id}}">
+            <div class="form-group mb-3">
+                <label for="name">Course Name</label>
+                <input type="text" id="name" name="name" value="{{course.name}}" class="form-control mt-2">
+            </div>
+            <div class="form-group mb-3">
+                <label for="code">Course Name</label>
+                <input type="text" id="code" name="code" value="{{course.code}}" class="form-control mt-2">
+            </div>
+            <input type="submit" value="Update" class="btn btn-primary btn-sm col-12">
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}
